@@ -2,7 +2,9 @@
 
 * find out how to get all font weights without making a big line
     *layout.txt (line 5)
-
+*find out how to fix the luckiest guy font not working
+    *_frountPage.scss 
+        * h1 tag
 
 
 

@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 //get the fonts for the app
-import { Karla, Lato } from "next/font/google";
+import { Karla, Lato, Luckiest_Guy } from "next/font/google";
 const karla = Karla({ subsets: ['latin'] });
 const lato = Lato({ weight: ['100','300','400','700','900'] , subsets: ['latin']});
-
+const luckyGuy = Luckiest_Guy({ weight: '400', subsets: ['latin'], style: 'normal'});
 
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${karla.className} ${lato.className}`}>
+      <body className={`${karla.className} ${lato.className} ${luckyGuy.className}`}>
         <MainContainer>
           {children}
         </MainContainer>

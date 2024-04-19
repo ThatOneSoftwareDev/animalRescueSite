@@ -25,5 +25,36 @@ html body {
   max-width: 1002px;
   min-height: 100vh;
   background-color: #f2fcfb;
-  padding: 0 3.5rem;
+}
+
+.banner {
+  width: 100%;
+  padding: 3.5em;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+}
+.banner h1 {
+  font-family: "Luckiest Guy";
+  text-align: center;
+  color: #000000;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  margin-bottom: 10px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-transform: initial;
+  margin: 17px 0;
+}
+.banner .line {
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin: 0 17px;
+}
+
+.sectionDivider {
+  border-bottom: 1px solid #d3dbdb;
 }
