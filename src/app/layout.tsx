@@ -1,5 +1,8 @@
-//this is the compiled css file that will give the app it's styles
+//components
 import MainContainer from "@/components/MainContainer";
+import Navbar from "@/components/Navbar";
+
+//this is the compiled css file that will give the app it's styles
 import "../styles/CompiledCss/index.css"
 
 //include title for the app
@@ -24,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${karla.className} ${lato.className} ${luckyGuy.className}`}>
         <MainContainer>
+          <Navbar/>
           {children}
         </MainContainer>
       </body>

@@ -1,7 +1,5 @@
 
 
-* a common padding choice is 3.5em
-* line padding is usually 0 17px
 
 
 

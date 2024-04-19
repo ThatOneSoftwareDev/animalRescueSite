@@ -1,0 +1,36 @@
+
+@use '../variables/transitions' as *;
+
+
+
+.navbar{
+    width: 100%;
+    height: max-content;
+    background-color: red;
+    position: sticky;
+    top: 0;
+
+        img{
+            width: 76.500px;
+            height: auto;
+            max-width: 350px;
+            max-height: 75px;
+
+
+            border-radius: 50%;
+            border: 1px solid black;
+            transition: $logoTransition;
+        }
+        img.small{
+            width: 51px;
+            height: auto;
+        }
+}
+
+
+
+
+
+
+
+
