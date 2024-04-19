@@ -43,9 +43,16 @@ html body {
 .navbar {
   width: 100%;
   height: max-content;
-  background-color: red;
+  background-color: #f2fcfb;
   position: sticky;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 3.5em;
+}
+.navbar * {
+  transition: all 180ms linear;
 }
 .navbar img {
   width: 76.5px;
@@ -54,11 +61,16 @@ html body {
   max-height: 75px;
   border-radius: 50%;
   border: 1px solid black;
-  transition: all 180ms linear;
 }
 .navbar img.small {
   width: 51px;
   height: auto;
+}
+.navbar .links {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  gap: 31px;
 }
 
 .banner {

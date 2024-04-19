@@ -3,9 +3,9 @@
 import Image from "next/image";
 import logo from '../../public/logos/logo-circle.png'
 import { useMotionValueEvent, useScroll } from "framer-motion"
-import { useEffect, useState } from "react";
-
-
+import { useContext, useEffect, useState } from "react";
+import { NavbarContext } from "@/contexts/NavbarContext";
+import Link from "next/link";
 
 
 const Logo = () => {
@@ -31,13 +31,34 @@ const Logo = () => {
      );
 }
 
+const Links = () => {
+    
+    const {navbarLinks} = useContext(NavbarContext)
+
+    
+    return ( 
+        <>
+            <span className="links">
+                {
+                    navbarLinks.map((item,index)=>{
+                        return(
+                            <Link href={item.linkLocation} key={index}>{item.linkName}</Link>    
+                        )
+                    })
+                }
+            </span>
+        </>
+     );
+}
 
 
 const Navbar = () => {
+
     return ( 
         <>
-            <nav className="navbar">
+            <nav className={`navbar`}>
                 <Logo/>
+                <Links/>
             </nav>
         </>
      );

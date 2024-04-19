@@ -1,15 +1,24 @@
 
 @use '../variables/transitions' as *;
-
+@use '../variables/padding' as *;
+@use '../variables/colors' as *;
 
 
 .navbar{
     width: 100%;
     height: max-content;
-    background-color: red;
+    background-color: $white;
     position: sticky;
     top: 0;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $navbarYPadding $sectionPadding;
+    
+        *{
+            transition: $logoTransition;
+        }
+        
         img{
             width: 76.500px;
             height: auto;
@@ -19,11 +28,17 @@
 
             border-radius: 50%;
             border: 1px solid black;
-            transition: $logoTransition;
         }
         img.small{
             width: 51px;
             height: auto;
+        }
+
+        .links{
+            width: max-content;
+            height: max-content;
+            display: flex;
+            gap: 31px;
         }
 }
 

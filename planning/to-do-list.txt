@@ -5,6 +5,8 @@
 *find out how to fix the luckiest guy font not working
     *_frountPage.scss 
         * h1 tag
+*make navbar scroll position usage not repeat
+    *navbar.tsx
 
 
 
