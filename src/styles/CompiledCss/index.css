@@ -51,6 +51,10 @@ html body {
   justify-content: space-between;
   padding: 26px 3.5em;
 }
+.navbar.smallNavPadding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .navbar * {
   transition: all 180ms linear;
 }
@@ -71,6 +75,33 @@ html body {
   height: max-content;
   display: flex;
   gap: 31px;
+}
+.navbar .links span {
+  position: relative;
+}
+.navbar .links span a {
+  text-decoration: none;
+  color: #888888;
+}
+.navbar .links span a:hover {
+  color: #d3dbdb;
+}
+.navbar .links span .dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: max-content;
+  max-height: 0;
+  background-color: orange;
+  transition: max-height 3s linear;
+}
+.navbar .links span .dropdown a {
+  padding: 10px;
+}
+.navbar .links span .visible {
+  max-height: 1000px;
+  transition: max-height 5s linear;
 }
 
 .banner {

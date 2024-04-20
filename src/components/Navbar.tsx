@@ -34,6 +34,7 @@ const Logo = () => {
 const Links = () => {
     
     const {navbarLinks} = useContext(NavbarContext)
+    const [visible,setVisible] = useState(false)
 
     
     return ( 
@@ -42,7 +43,23 @@ const Links = () => {
                 {
                     navbarLinks.map((item,index)=>{
                         return(
-                            <Link href={item.linkLocation} key={index}>{item.linkName}</Link>    
+                            <span key={index}>
+                                <Link href={item.linkLocation}
+                                onMouseEnter={()=>{setVisible(!visible)}} 
+                                onMouseLeave={()=>{setVisible(!visible)}}
+                                >{item.linkName}</Link>
+                                <div className={`dropdown ${visible ? 'visible' : ''}`}>
+                                    {
+                                        item.subListLinks.map((item2,index2)=>{
+                                            return(
+                                                <>
+                                                    <Link key={index2} href={item2.location}>{item.linkName}</Link>
+                                                </>
+                                            )
+                                        })
+                                    }
+                                </div>    
+                            </span>
                         )
                     })
                 }
@@ -54,9 +71,24 @@ const Links = () => {
 
 const Navbar = () => {
 
+    //make varables for scroll
+    const { scrollY  } = useScroll()
+    const [scrollPosition,setScrollPosition] = useState(false)
+    const scrollThreshold = 100
+
+    //this monitors the scroll position without constant rerenders
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        //console.log("Page scroll: ", latest) //this is the number
+        if(latest > scrollThreshold && scrollPosition !== true){
+            setScrollPosition(!scrollPosition)
+        }else if(latest < scrollThreshold && scrollPosition !== false){
+            setScrollPosition(!scrollPosition)
+        }
+    })
+
     return ( 
         <>
-            <nav className={`navbar`}>
+            <nav className={`navbar ${scrollPosition ? 'smallNavPadding' : ''}`}>
                 <Logo/>
                 <Links/>
             </nav>

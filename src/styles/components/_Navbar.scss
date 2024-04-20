@@ -15,6 +15,10 @@
     justify-content: space-between;
     padding: $navbarYPadding $sectionPadding;
     
+        &.smallNavPadding{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
         *{
             transition: $logoTransition;
         }
@@ -39,10 +43,41 @@
             height: max-content;
             display: flex;
             gap: 31px;
+
+                span{
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: $grey;
+    
+                            &:hover{
+                                color: $lightGrey;
+                            }
+                    }
+                    .dropdown{
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;
+
+                        width: max-content;
+                        max-height: 0;
+                        
+                        background-color: orange;
+                        transition: $dropdownNavTransition2;
+                        
+                            a{
+                                padding: 10px;
+                            }
+                    }
+
+                    .visible{
+                        max-height: 1000px;
+                        transition: $dropdownNavTransition;
+                    }
+                }
         }
 }
-
-
 
 
 
