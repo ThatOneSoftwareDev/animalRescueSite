@@ -5,7 +5,7 @@
 @use "../variables/colors" as *;
 @use "../variables/fontSize" as *;
 @use "../variables/gap" as *;
-
+@use "../variables/fonts" as *;
 
 
 .sectionContainerPadded{
@@ -17,7 +17,7 @@
             height: auto;
         }
         h1{
-            font-family: '__Luckiest_Guy_6d9c92';
+            font-family: $luckyGuy;//'__Luckiest_Guy_6d9c92'
             text-align: center;
             color: #000000;
             font-style: normal;

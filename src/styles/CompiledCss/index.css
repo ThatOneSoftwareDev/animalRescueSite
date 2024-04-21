@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -139,7 +139,7 @@ html body {
   height: auto;
 }
 .sectionContainerPadded h1 {
-  font-family: "__Luckiest_Guy_6d9c92";
+  font-family: var(--font-luckyGuy);
   text-align: center;
   color: #000000;
   font-style: normal;

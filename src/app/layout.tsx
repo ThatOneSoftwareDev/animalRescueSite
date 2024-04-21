@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 
 //get the fonts for the app
 import { Karla, Lato, Luckiest_Guy } from "next/font/google";
-const karla = Karla({ subsets: ['latin'] });
-const lato = Lato({ weight: ['100','300','400','700','900'] , subsets: ['latin']});
-const luckyGuy = Luckiest_Guy({ weight: '400', subsets: ['latin'], style: 'normal'});
+const karla = Karla({ subsets: ['latin'] , variable:"--font-karla"});
+const lato = Lato({ weight: ['100','300','400','700','900'] , subsets: ['latin'], variable:"--font-lato"});
+const luckyGuy = Luckiest_Guy({ weight: '400', subsets: ['latin'], style: 'normal',variable: "--font-luckyGuy"});
 
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${karla.className} ${lato.className} ${luckyGuy.className}`}>
+      <body className={`${karla.variable} ${lato.variable} ${luckyGuy.variable}`}>
         <MainContextWrapper>
           <MainContainer>
             <Navbar/>

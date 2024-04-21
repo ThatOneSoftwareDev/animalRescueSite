@@ -1,5 +1,5 @@
 
-
+@use "../variables/fonts" as *;
 
 
 
@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato',Arial, Helvetica, sans-serif;
+    font-family: $lato,Arial, Helvetica, sans-serif;
 }
 
 html{
