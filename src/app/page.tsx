@@ -2,6 +2,7 @@
 //import components
 import MainContainer from "@/components/MainContainer";
 import Divider from "@/components/Divider";
+import ButtonMediumBlack from "@/components/ButtonMediumBlack";
 
 //next js and react import
 import Image from "next/image";
@@ -76,11 +77,72 @@ const PinkInfo = () => {
 }
 
 
+//this is the third element on the page
+const DontateInfo = () => {
+
+  const cashApp = "https://cash.app/$grandmashouserescue"
+  const donationLevels = [
+    "$45 -Feed Everyone For a Day",
+    "$75 - Vet Fee for House Call",
+    "$110 - Bedding for a Month",
+    "$320 - Medical Implant for a Hen",
+    "$950 - Hay for a Month"
+  ]
+
+  return ( 
+    <>
+      <section>
+        <Link href={cashApp} target="_blank"><strong>Dontae</strong></Link>
+        <p>​
+          Thank you so much for your support!  We could not give our rescued animals their best happily-ever-afters without you!
+        </p>
+        <ul>
+          {
+            donationLevels.map((item,index)=>{
+              return(
+                <li key={index}>{item}</li>
+              )
+            })
+          }
+        </ul>
+        <ButtonMediumBlack>Give a Happily-Ever-After</ButtonMediumBlack>
+      </section>
+    </>
+   );
+}
+
+const ImageAndText = () => {
+  return ( 
+    <>
+      <section>
+
+      </section>
+    </>
+   );
+}
+
+const Donate = () => {
+  return ( 
+    <>
+      <SectionContainer>
+        <div className="dontateContainer">
+          <DontateInfo/>
+          <ImageAndText/>
+        </div>
+        <Divider/>
+      </SectionContainer>
+    </>
+   );
+}
+
+
+
 export default function Home() {
   return (
     <>
       <Banner/>
       <PinkInfo/>
+      <Donate/>
     </>
   );
 }

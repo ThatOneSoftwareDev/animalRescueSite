@@ -1,0 +1,35 @@
+
+@use '../variables/padding' as *;
+@use '../variables/colors' as *;
+
+
+
+.buttonMediumBlack{
+    width: max-content;
+    height: max-content;
+    padding: $buttonPaddingmedium2 $buttonPaddingmedium1;
+    border: 0;
+    background-color: $lightBlack;
+    color: $white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12.88px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    font-weight: 400;
+    
+
+        &:hover{
+            filter: brightness(1.3);
+        }
+}
+
+
+
+
+
+
+
+
+
+

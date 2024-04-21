@@ -17,7 +17,7 @@
             height: auto;
         }
         h1{
-            font-family: 'Luckiest Guy';
+            font-family: '__Luckiest_Guy_6d9c92';
             text-align: center;
             color: #000000;
             font-style: normal;
@@ -80,6 +80,52 @@
         }
 }
 
+
+.dontateContainer{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+
+        section{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 $sectionPaddingSmall1;
+
+                &:nth-child(1){
+                    background-color: orange;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+
+                        a{
+                            color: $blue2;
+                            font-size: 24px;
+                            text-decoration-color: rgba($blue2, 0.1);
+                        }
+                        p{
+                            text-align: center;
+                            color: $darkBlue1;
+                            font-weight: 700;
+                            font-size: 16.8px;
+                        }
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                            list-style-type: none;
+                            font-weight: 700;
+                            font-size: 16.8px;
+                            color: $grey;
+                        }
+                }
+                &:nth-child(2){
+                    background-color: olive;
+                }
+        }
+}
 
 
 
