@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: space-between;
     padding: $navbarYPadding $sectionPadding;
+    transition: $logoTransition;
     
         &.smallNavPadding{
             padding-top: 5px;
@@ -59,20 +60,22 @@
                         display: flex;
                         flex-direction: column;
                         overflow: hidden;
+                        left: -50%;
+                        top: 2rem;
 
                         width: max-content;
                         max-height: 0;
-                        
-                        background-color: orange;
+                        background-color: $white;
                         transition: $dropdownNavTransition2;
                         
                             a{
-                                padding: 10px;
+                                padding: 10px 20px;
                             }
                     }
 
                     .visible{
                         max-height: 1000px;
+                        border: 0.5px solid $lightGrey;
                         transition: $dropdownNavTransition;
                     }
                 }

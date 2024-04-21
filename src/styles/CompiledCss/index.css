@@ -50,6 +50,7 @@ html body {
   align-items: center;
   justify-content: space-between;
   padding: 26px 3.5em;
+  transition: all 180ms linear;
 }
 .navbar.smallNavPadding {
   padding-top: 5px;
@@ -91,32 +92,38 @@ html body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  left: -50%;
+  top: 2rem;
   width: max-content;
   max-height: 0;
-  background-color: orange;
+  background-color: #f2fcfb;
   transition: max-height 3s linear;
 }
 .navbar .links span .dropdown a {
-  padding: 10px;
+  padding: 10px 20px;
 }
 .navbar .links span .visible {
   max-height: 1000px;
+  border: 0.5px solid #d3dbdb;
   transition: max-height 5s linear;
 }
 
-.banner {
+.sectionContainerPadded {
   width: 100%;
-  padding: 3.5em;
+  padding: 0 3.5em;
 }
-.banner img {
+
+.sectionContainerPadded:nth-child(2) {
+  padding-top: 3.5em;
+}
+.sectionContainerPadded img {
   width: 100%;
   height: auto;
 }
-.banner h1 {
+.sectionContainerPadded h1 {
   font-family: "Luckiest Guy";
   text-align: center;
   color: #000000;
-  font-weight: 400;
   font-style: normal;
   font-size: 32px;
   margin-bottom: 10px;
@@ -124,6 +131,52 @@ html body {
   -webkit-font-smoothing: antialiased;
   text-transform: initial;
   margin: 17px 0;
+}
+
+.pinkBox {
+  width: 100%;
+  height: 439.375px;
+  background-color: #e97676;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.pinkBox .paragraph {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  font-size: 1.2em;
+  color: #f2fcfb;
+}
+.pinkBox .LocationAndInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+  font-size: 1.2em;
+  gap: 10px;
+}
+.pinkBox .LocationAndInfo a {
+  color: #055a8b;
+  font-weight: bold;
+  text-decoration-color: #da4444;
+}
+.pinkBox .Scocials {
+  display: flex;
+  gap: 15px;
+}
+.pinkBox .Scocials img {
+  max-width: 21px;
+  margin-bottom: 68px;
+  cursor: pointer;
+}
+.pinkBox .Scocials img:hover {
+  filter: brightness(50);
 }
 
 .sectionDivider {

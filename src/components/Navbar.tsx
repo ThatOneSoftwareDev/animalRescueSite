@@ -34,8 +34,28 @@ const Logo = () => {
 const Links = () => {
     
     const {navbarLinks} = useContext(NavbarContext)
-    const [visible,setVisible] = useState(false)
+    const [visible,setVisible] = useState<boolean[]>([])
 
+    const handleMouseEnter = (index:number) => {
+        let updatedVisible = [...visible];
+        updatedVisible[index] = true;
+        setVisible(updatedVisible);
+    };
+
+    const handleMouseLeave = (index:number) => {
+        let updatedVisible = [...visible];
+        updatedVisible[index] = false;
+        setVisible(updatedVisible);
+    };
+
+    useEffect(()=>{
+        navbarLinks.map((item,index)=>{
+            //console.log(item.subListLinks.length)
+            let newArray = visible
+            newArray[index] = false
+            setVisible(newArray)
+        })
+    },[navbarLinks])
     
     return ( 
         <>
@@ -45,10 +65,14 @@ const Links = () => {
                         return(
                             <span key={index}>
                                 <Link href={item.linkLocation}
-                                onMouseEnter={()=>{setVisible(!visible)}} 
-                                onMouseLeave={()=>{setVisible(!visible)}}
+                                onMouseEnter={()=>{handleMouseEnter(index)}} 
+                                onMouseLeave={()=>{handleMouseLeave(index)}}
                                 >{item.linkName}</Link>
-                                <div className={`dropdown ${visible ? 'visible' : ''}`}>
+                                <div 
+                                className={`dropdown ${visible[index] ? 'visible' : ''}`}
+                                onMouseEnter={()=>{handleMouseEnter(index)}} 
+                                onMouseLeave={()=>{handleMouseLeave(index)}}
+                                >
                                     {
                                         item.subListLinks.map((item2,index2)=>{
                                             return(
