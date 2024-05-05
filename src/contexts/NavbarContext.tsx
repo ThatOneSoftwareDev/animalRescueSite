@@ -23,29 +23,14 @@ const NavbarContextWrapper = ({
 
     //make links appear
     const navbarLinks = [
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
+        new NavbarLink('Adoption Info','/adoption',[
+            new linkObject('Adoption Application', "/adoption/application") //sub link
         ]),
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
+        new NavbarLink('Our Animals','/animals',[
+            new linkObject('Dogs', "/animals/dogs") //sub link
         ]),
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
-        ]),
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
-        ]),
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
-        ]),
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
-        ]),
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
-        ]),
-        new NavbarLink('test','/dev',[
-            new linkObject('test', "/test") //sub link
+        new NavbarLink('About Us','/about',[
+            //new linkObject('test', "/test") //sub link
         ])
     ]
 

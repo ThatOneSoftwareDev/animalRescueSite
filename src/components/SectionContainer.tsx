@@ -2,16 +2,18 @@ import { ReactNode } from "react";
 
 
 interface props{
-    children: ReactNode
+    children: ReactNode,
+    customClasses?:string
 }
 
 
 const SectionContainer = ({
-    children
+    children,
+    customClasses
 }:props) => {
     return ( 
         <>
-            <div className="sectionContainerPadded">
+            <div className={`sectionContainerPadded ${customClasses}`}>
                 {children}
             </div>
         </>

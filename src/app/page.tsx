@@ -3,20 +3,28 @@
 import MainContainer from "@/components/MainContainer";
 import Divider from "@/components/Divider";
 import ButtonMediumBlack from "@/components/ButtonMediumBlack";
+import MediaAnimals from "@/components/partials/_MasonryImages";
+import Footer from "@/components/Footer";
+
+//other packages
+
 
 //next js and react import
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { Luckiest_Guy } from "next/font/google";
 
 
 
 //images
 import Cats from "../../public/banner.jpg"
 import SectionContainer from "@/components/SectionContainer";
-import { Luckiest_Guy } from "next/font/google";
 import Link from "next/link";
 import ticTok from "../../public/icons/tictok.svg"
 import TicTokImage from "@/components/partials/_TicTokImage";
+import hamster from "../../public/Animal-Picture-Temp/hamster.png"
+
 
 //this is the first element on the page
 const Banner = () => {
@@ -105,22 +113,24 @@ const DontateInfo = () => {
             })
           }
         </ul>
-        <ButtonMediumBlack>Give a Happily-Ever-After</ButtonMediumBlack>
+        <ButtonMediumBlack herf={cashApp}>Give a Happily-Ever-After</ButtonMediumBlack>
       </section>
     </>
    );
 }
-
 const ImageAndText = () => {
+
+  const oldSiteLink = "https://grandmashomeforoutcastdogs.org/"
+
   return ( 
     <>
       <section>
-
+        <Link href={oldSiteLink} target="_blank">Go To Our Old Site!!!</Link>
+        <Image src={hamster} alt=""/>
       </section>
     </>
    );
 }
-
 const Donate = () => {
   return ( 
     <>
@@ -136,6 +146,44 @@ const Donate = () => {
 }
 
 
+//this is the fourth element on the page
+const Media = () => {
+  return ( 
+    <>
+      <SectionContainer>
+        <h1 className="headdingANimals">Take a look at our animals!</h1>
+        <MediaAnimals/>
+        <Divider/>
+      </SectionContainer>
+    </>
+   );
+}
+
+
+
+//this is the 5th element on the page
+const KeepUpWith = () => {
+
+  const facebook = "https://www.facebook.com/brenda.correia.370?mibextid=LQQJ4d"
+  const insta = "https://www.instagram.com/grandmashomeforoutcastdogs/?utm_source=qr"
+  const cashapp = "https://cash.app/$grandmashouserescue"
+  const amazonWishlist = "https://www.amazon.com/hz/wishlist/ls/1ZFD84V585QDJ?ref_=wl_share"
+
+  return ( 
+    <>
+        <section className="blueSectionEnd">
+          <h2>Keep Up With The Grandma&apos;s House Family</h2>
+          <ButtonMediumBlack herf="">SUBSCRIBE</ButtonMediumBlack>
+          <p className="p">(We would never sell your info)</p>
+          <p className="follow">​Follow us on <Link href={facebook} target="_blank">Facebook</Link> and <Link href={insta} target="_blank">Instagram</Link> for the most current happenings and animal updates!</p>
+          <h3>Do not have cashapp? How about donating <Link target="_blank" href={amazonWishlist}>supplies</Link>?</h3>
+        </section>
+        <Divider/>
+    </>
+   );
+}
+
+
 
 export default function Home() {
   return (
@@ -143,6 +191,9 @@ export default function Home() {
       <Banner/>
       <PinkInfo/>
       <Donate/>
+      <Media/>
+      <KeepUpWith/>
+      <Footer/>
     </>
   );
 }

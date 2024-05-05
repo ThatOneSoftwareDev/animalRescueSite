@@ -1,16 +1,19 @@
+import Link from "next/link";
 import { ReactNode } from "react";
 
 
 interface props{
-    children: ReactNode
+    children: ReactNode,
+    herf: string
 }
 
 
 const ButtonMediumBlack = ({
-    children
+    children,
+    herf
 }:props) => {
     return ( 
-        <button className="buttonMediumBlack">{children}</button>
+        <button className="buttonMediumBlack"><Link href={herf} target="_blank">{children}</Link></button>
      );
 }
 

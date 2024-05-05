@@ -21,7 +21,7 @@
             text-align: center;
             color: #000000;
             font-style: normal;
-            font-size: 32px;
+            font-size: $mediumPX-32;
             margin-bottom: 10px;
             line-height: 1;
             -webkit-font-smoothing: antialiased;
@@ -48,7 +48,7 @@
             display: flex;
             flex-direction: column;
             gap: $gap1Medium;
-            font-size: $medium1;
+            font-size: $mediumEM-1;
             color: $white;
         }
         .LocationAndInfo{
@@ -56,7 +56,7 @@
             flex-direction: column;
             text-align: center;
             justify-items: center;
-            font-size: $medium1;
+            font-size: $mediumEM-1;
             gap: $gap1Small;
 
                 a{
@@ -95,21 +95,20 @@
             padding: 0 $sectionPaddingSmall1;
 
                 &:nth-child(1){
-                    background-color: orange;
                     display: flex;
                     flex-direction: column;
                     gap: 50px;
 
                         a{
                             color: $blue2;
-                            font-size: 24px;
+                            font-size: $mediumPX-24;
                             text-decoration-color: rgba($blue2, 0.1);
                         }
                         p{
                             text-align: center;
                             color: $darkBlue1;
                             font-weight: 700;
-                            font-size: 16.8px;
+                            font-size: $smallPX-16-2;
                         }
                         ul{
                             display: flex;
@@ -117,15 +116,64 @@
                             gap: 30px;
                             list-style-type: none;
                             font-weight: 700;
-                            font-size: 16.8px;
+                            font-size: $smallPX-16-2;
                             color: $grey;
+                        }
+                        button{
+                            a{
+                                color: $white;
+                                font-size: $smallPX-12;
+                                -webkit-font-smoothing: antialiased;
+                                letter-spacing: 1px;
+                                font-weight: 400;
+                            }
                         }
                 }
                 &:nth-child(2){
-                    background-color: olive;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 65px;
+
+                        a{
+                            color: $red;
+                            font-size: $mediumPX-24;
+                            font-weight: 700;
+                        }
                 }
         }
 }
 
+.headdingANimals{
+    letter-spacing: 1px;
+}
 
+.blueSectionEnd{
+    width: 100%;
+    background-color: $blue3;
+    padding: $mediumPadding1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 47px;
+
+        a{
+            color: $red;
+        }
+        button{
+            background-color: $white;
+            *{
+                color: $black;
+                text-decoration: none;
+            }
+        }
+        .p{
+            color: $white;
+        }
+        h3,.follow{
+            font-size: $smallPX-18;
+        }
+}
 

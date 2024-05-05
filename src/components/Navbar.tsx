@@ -6,27 +6,23 @@ import { useMotionValueEvent, useScroll } from "framer-motion"
 import { useContext, useEffect, useState } from "react";
 import { NavbarContext } from "@/contexts/NavbarContext";
 import Link from "next/link";
+import { useScrollPosition } from "@/custom-hooks/useScrollPosition";
 
 
 const Logo = () => {
     //make varables for scroll
-    const { scrollY  } = useScroll()
-    const [scrollPosition,setScrollPosition] = useState(false)
-    const scrollThreshold = 100
+    const scrollThreshold = 150
+    const scrollPosition = useScrollPosition()
 
+    useEffect(()=>{
+        console.log(scrollPosition)
+    },[scrollPosition])
+    
     //this monitors the scroll position without constant rerenders
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        //console.log("Page scroll: ", latest) //this is the number
-        if(latest > scrollThreshold && scrollPosition !== true){
-            setScrollPosition(!scrollPosition)
-        }else if(latest < scrollThreshold && scrollPosition !== false){
-            setScrollPosition(!scrollPosition)
-        }
-    })
 
     return ( 
         <>
-            <Image src={logo} alt="" className={`${scrollPosition ? 'small' : ''}`}/>
+            <Image src={logo} alt="" className={`${scrollPosition > scrollThreshold ? 'small' : ''}`}/>
         </>
      );
 }

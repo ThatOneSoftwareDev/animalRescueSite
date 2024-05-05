@@ -119,16 +119,47 @@ html body {
   padding: 20px 40px;
   border: 0;
   background-color: #383838;
-  color: #f2fcfb;
   cursor: pointer;
   border-radius: 3px;
-  font-size: 12.88px;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: 1px;
-  font-weight: 400;
 }
 .buttonMediumBlack:hover {
   filter: brightness(1.3);
+}
+
+.footer {
+  width: 100%;
+}
+.footer section {
+  width: 100%;
+  height: 231px;
+  border-bottom: 5px solid rgba(136, 136, 136, 0.1);
+}
+.footer main {
+  width: 100%;
+  height: 180px;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+.footer main h1 {
+  font-size: 12.88px;
+}
+
+.linkList {
+  position: fixed;
+  top: 25%;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.linkList .image {
+  width: 48px;
+  height: auto;
+}
+.linkList .image:hover {
+  filter: brightness(1.2);
 }
 
 .sectionContainerPadded:nth-child(2) {
@@ -211,7 +242,6 @@ html body {
   padding: 0 20px;
 }
 .dontateContainer section:nth-child(1) {
-  background-color: orange;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -236,8 +266,95 @@ html body {
   font-size: 16.8px;
   color: #888888;
 }
+.dontateContainer section:nth-child(1) button a {
+  color: #f2fcfb;
+  font-size: 12.88px;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
 .dontateContainer section:nth-child(2) {
-  background-color: olive;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+.dontateContainer section:nth-child(2) a {
+  color: #da4444;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.headdingANimals {
+  letter-spacing: 1px;
+}
+
+.blueSectionEnd {
+  width: 100%;
+  background-color: #1db2b6;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 47px;
+}
+.blueSectionEnd a {
+  color: #da4444;
+}
+.blueSectionEnd button {
+  background-color: #f2fcfb;
+}
+.blueSectionEnd button * {
+  color: #000;
+  text-decoration: none;
+}
+.blueSectionEnd .p {
+  color: #f2fcfb;
+}
+.blueSectionEnd h3, .blueSectionEnd .follow {
+  font-size: 18px;
+}
+
+.aboutBanner {
+  width: 100%;
+  height: 400px;
+  background-image: url("/Animal-Picture-Temp/dog-brown.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: top;
+}
+.aboutBanner .donateButton {
+  margin-top: 169px;
+  margin-left: 50px;
+}
+
+.missionStatement h2 {
+  font-family: var(--font-luckyGuy) !important;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+.missionStatement p {
+  color: #383838;
+  font-weight: bold;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+.infoSection .infoSectionText {
+  color: #383838;
+}
+
+.aboutSectionText {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
 }
 
 .sectionDivider {

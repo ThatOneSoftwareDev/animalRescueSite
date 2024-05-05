@@ -1,0 +1,55 @@
+
+@use '../variables/fonts' as *;
+@use '../variables/fontSize' as *;
+@use '../variables/colors' as *;
+@use '../variables/padding' as *;
+
+
+.aboutBanner{
+    width: 100%;
+    height: 400px;
+    background-image: url("/Animal-Picture-Temp/dog-brown.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+
+        .donateButton{
+            margin-top: 169px;
+            margin-left: 50px;
+        }
+
+}
+
+.missionStatement{
+    h2{
+        font-family: $luckyGuy !important;
+        font-size: $mediumPX-32;
+        letter-spacing: 1px;
+    }
+    p{
+      color: $lightBlack;
+      font-weight: bold;
+    }
+}
+
+.infoSection{
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    .infoSectionText{
+        color: $lightBlack;
+    }
+}
+
+.aboutSectionText{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+}
+
+
+
+
+

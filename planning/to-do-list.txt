@@ -12,3 +12,7 @@
     *all pages
 
 
+* make navbar padding classes/vars
+* make link context for socials
+
+

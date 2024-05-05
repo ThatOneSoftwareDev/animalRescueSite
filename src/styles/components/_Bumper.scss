@@ -1,0 +1,39 @@
+
+@use "../variables/colors" as *;
+@use '../variables/fontSize' as *;
+
+
+
+
+.footer{
+    width: 100%;
+    
+    section{
+        width: 100%;
+        height: 231px;
+        border-bottom: 5px solid rgba($grey, 0.1);
+    }
+    main{
+        width: 100%;
+        height: 180px;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+            h1{
+                font-size: $smallPX-12;
+            }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

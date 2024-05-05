@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 //get the fonts for the app
 import { Karla, Lato, Luckiest_Guy } from "next/font/google";
+import LinkList from "@/components/LinkList";
 const karla = Karla({ subsets: ['latin'] , variable:"--font-karla"});
 const lato = Lato({ weight: ['100','300','400','700','900'] , subsets: ['latin'], variable:"--font-lato"});
 const luckyGuy = Luckiest_Guy({ weight: '400', subsets: ['latin'], style: 'normal',variable: "--font-luckyGuy"});
@@ -32,6 +33,7 @@ export default function RootLayout({
             <Navbar/>
             {children}
           </MainContainer>
+          <LinkList/>
         </MainContextWrapper>
       </body>
     </html>
