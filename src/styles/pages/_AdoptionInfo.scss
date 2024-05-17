@@ -1,0 +1,47 @@
+@use "../variables/fonts" as *;
+
+
+
+
+.adoptionSection1{
+    .bannerAdoptionInfoPage{
+        width: 100%;
+        height: 500px;
+        background-color: pink;
+        background-image: url(/Animal-Picture-Temp/Dog-adoption-banner.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h1{
+        font-family: $luckyGuy;
+        letter-spacing: 1px;
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+    }
+}
+
+
+.adoption{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.adoptionApplication{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    .adoptionForm{
+        width: 100%;
+        height: 60rem;
+    }
+}
+
+
+

@@ -6,7 +6,7 @@
 
 .navbar{
     width: 100%;
-    height: max-content;
+    min-height: 75px;
     background-color: $white;
     position: sticky;
     top: 0;

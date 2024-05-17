@@ -11,6 +11,7 @@ import { InfoSectionData } from '@/tempData/InfoSectionData';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import DontateButton from '../../../public/basic-img/donate button.gif'
+import KeepUpWith from '@/components/KeepUpWith';
 
 const Banner = () => {
     return ( 
@@ -87,6 +88,9 @@ const AboutPage = () => {
         <>
             <Banner/>
             <AboutText/>
+            <div className="keepContainer">
+                <KeepUpWith/>
+            </div>
             <Footer/>
         </>
      );

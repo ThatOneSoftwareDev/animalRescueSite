@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 
 
 
-export const useScrollPosition = (delay = 250) => {
+export const useScrollPosition = (delay = 150) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
-    let timeoutId : number;
+    let timeoutId : NodeJS.Timeout;
 
     const updatePosition = () => {
       clearTimeout(timeoutId);

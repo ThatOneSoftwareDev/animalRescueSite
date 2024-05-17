@@ -1,13 +1,33 @@
+'use client'
+import Footer from "@/components/Footer";
+import MediaAnimals from "@/components/partials/_MasonryAnimals";
+import { useEffect } from "react";
 
 
+
+const Banner = () => {
+  return ( 
+    <>
+      <main className="bannerAnimalsPage">
+        <h6>Meet Our Animals</h6>
+      </main>
+    </>
+   );
+}
 
 
 
 
 const AnimalsPage = () => {
+
+
     return ( 
         <>
-            <h1>Animals</h1>
+            <Banner/>
+              <section className="videos">
+                <MediaAnimals/>
+              </section>
+            <Footer/>
         </>
      );
 }

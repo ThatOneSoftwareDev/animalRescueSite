@@ -1,0 +1,60 @@
+
+
+@use "../variables/fonts" as *;
+
+
+.bannerAnimalsPage{
+    width: 100%;
+    height: 550px;
+    background-image: url("/basic-img/racoon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+        h6{
+            font-size: 30px;
+            margin-left: 30px;
+            font-family: $luckyGuy;
+            letter-spacing: 1px;
+        }
+}
+
+.videos{
+    padding: 10px;
+
+        .video{
+            cursor: pointer;
+        }
+}
+
+
+.videoPlayer{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-end;
+
+        .close{
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        video{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+}
+
+
+
+
+
+

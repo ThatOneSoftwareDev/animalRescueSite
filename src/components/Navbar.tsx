@@ -22,7 +22,9 @@ const Logo = () => {
 
     return ( 
         <>
+            <Link href={'/'}>
             <Image src={logo} alt="" className={`${scrollPosition > scrollThreshold ? 'small' : ''}`}/>
+            </Link>
         </>
      );
 }
@@ -51,7 +53,7 @@ const Links = () => {
             newArray[index] = false
             setVisible(newArray)
         })
-    },[navbarLinks])
+    },[navbarLinks,visible])
     
     return ( 
         <>
@@ -72,9 +74,7 @@ const Links = () => {
                                     {
                                         item.subListLinks.map((item2,index2)=>{
                                             return(
-                                                <>
-                                                    <Link key={index2} href={item2.location}>{item.linkName}</Link>
-                                                </>
+                                                <Link key={index2} href={item2.location}>{item2.name}</Link>
                                             )
                                         })
                                     }

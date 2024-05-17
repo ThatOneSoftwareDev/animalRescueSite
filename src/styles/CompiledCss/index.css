@@ -42,7 +42,7 @@ html body {
 
 .navbar {
   width: 100%;
-  height: max-content;
+  min-height: 75px;
   background-color: #f2fcfb;
   position: sticky;
   top: 0;
@@ -355,6 +355,93 @@ html body {
   display: flex;
   flex-direction: column;
   gap: 67px;
+}
+
+.keepContainer {
+  padding-top: 100px;
+}
+
+.bannerAnimalsPage {
+  width: 100%;
+  height: 550px;
+  background-image: url("/basic-img/racoon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.bannerAnimalsPage h6 {
+  font-size: 30px;
+  margin-left: 30px;
+  font-family: var(--font-luckyGuy);
+  letter-spacing: 1px;
+}
+
+.videos {
+  padding: 10px;
+}
+.videos .video {
+  cursor: pointer;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+.videoPlayer .close {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+.videoPlayer video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.adoptionSection1 .bannerAdoptionInfoPage {
+  width: 100%;
+  height: 500px;
+  background-color: pink;
+  background-image: url(/Animal-Picture-Temp/Dog-adoption-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.adoptionSection1 h1 {
+  font-family: var(--font-luckyGuy);
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.adoption {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.adoptionApplication {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.adoptionApplication .adoptionForm {
+  width: 100%;
+  height: 60rem;
 }
 
 .sectionDivider {

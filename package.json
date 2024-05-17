@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fillout/react": "^1.1.1",
     "framer-motion": "^11.1.7",
+    "list-react-files": "^0.2.0",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-loading-skeleton": "^3.4.0",
     "react-responsive-masonry": "^2.2.0"
   },
   "devDependencies": {
