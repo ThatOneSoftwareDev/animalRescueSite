@@ -12,6 +12,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import DontateButton from '../../../public/basic-img/donate button.gif'
 import KeepUpWith from '@/components/KeepUpWith';
+import { ReactNode } from 'react';
 
 const Banner = () => {
     return ( 
@@ -38,17 +39,22 @@ const MissionStatement = () => {
 }
 interface InfoSectionTextProps{
     title: string,
-    text:string
+    text:string,
+    children?: ReactNode
 } 
 const InfoSectionText = ({
     title,
-    text
+    text,
+    children
 }:InfoSectionTextProps) => {
     return ( 
         <>
             <span className='infoSectionText'>
                 <h4>{title}</h4>
-                <p>{text}</p>
+                <p>
+                    {children}
+                    {text}
+                </p>
             </span>
         </>
      );
@@ -59,11 +65,18 @@ const InfoSection = () => {
             <section className="infoSection">
                 {
                     InfoSectionData.map((item,index)=>{
-                        return <InfoSectionText 
-                        title={item.title}
-                        text={item.text}
-                        key={index}
-                        />
+                        return(
+                            <InfoSectionText 
+                            title={item.title}
+                            text={item.text}
+                            key={index}
+                            >
+                                {
+                                    index !== 1 ? <></>: 
+                                    <Image className='img' src={'/Animal-Picture-Temp/cute-cat.png'} alt='' width={50} height={50}/>
+                                }
+                            </InfoSectionText>
+                        )
                     })
                 }
             </section>
