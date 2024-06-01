@@ -18,7 +18,7 @@ import { Luckiest_Guy } from "next/font/google";
 
 
 //images
-import Cats from "../../public/banner.jpg"
+import Dog from "../../public/banner2.jpg"
 import SectionContainer from "@/components/SectionContainer";
 import Link from "next/link";
 import ticTok from "../../public/icons/tictok.svg"
@@ -34,7 +34,7 @@ const Banner = () => {
   return ( 
     <>
       <SectionContainer>
-        <Image src={Cats} alt="" loading={'lazy'}/>
+        <Image src={Dog} alt="" loading={'lazy'}/>
         <h1>GRANDMA’S HOUSE RESCUE</h1>
         <Divider/>
       </SectionContainer>

@@ -43,6 +43,7 @@ html body {
 .navbar {
   width: 100%;
   min-height: 75px;
+  height: 100px;
   background-color: #f2fcfb;
   position: sticky;
   top: 0;
@@ -64,6 +65,7 @@ html body {
   height: auto;
   max-width: 350px;
   max-height: 75px;
+  position: relative;
   border-radius: 50%;
   border: 1px solid black;
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 
 
-export const useScrollPosition = (delay = 150) => {
+export const useScrollPosition = (delay = 50) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
