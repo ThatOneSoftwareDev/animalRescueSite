@@ -81,11 +81,56 @@
                         transition: $dropdownNavTransition;
                     }
                 }
+                @media (max-width:452px) {
+                    display: none;
+                }
+        }
+        @media (max-width:500px) {
+            padding: 10px;
         }
 }
 
+.menuIcon{
+    font-size: 3rem;
+    font-weight: 400;
 
+    @media (min-width: 452px) {
+        display: none;
+    }
+}
+.mobileNav{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    
+    left: 0;
+    top: 0;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: end;
+
+    i{
+        width: max-content;
+    }
+    
+    .linksMobile{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+            *{
+                text-decoration: none;
+                color: black;
+                font-size: 2rem;
+            }
+    }
+}
 
 
 

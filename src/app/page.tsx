@@ -63,7 +63,7 @@ const LocationAndInfo = () => {
   return ( 
     <>
       <span className="LocationAndInfo">
-        <p>We are a 501(C)(3) Nonprofit located in Williamsburg, VA </p>
+        <p>We are a 501(C)(3) Nonprofit</p>
         <Link href={''}>(click for our Guidestar info)</Link>
       </span>
     </>
@@ -91,11 +91,10 @@ const DontateInfo = () => {
 
   const cashApp = "https://cash.app/$grandmashouserescue"
   const donationLevels = [
-    "$45 -Feed Everyone For a Day",
-    "$75 - Vet Fee for House Call",
-    "$110 - Bedding for a Month",
-    "$320 - Medical Implant for a Hen",
-    "$950 - Hay for a Month"
+    "Vet Fee - One animal",
+    "$110 - Spay and Neuter for one animal",
+    "$320 - Dog food one month",
+    "$590 - Animal feed for one month"
   ]
 
   return ( 

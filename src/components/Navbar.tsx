@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logo from '../../public/logos/logo-circle.png'
 import { useMotionValueEvent, useScroll } from "framer-motion"
-import { useContext, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
 import { NavbarContext } from "@/contexts/NavbarContext";
 import Link from "next/link";
 import { useScrollPosition } from "@/custom-hooks/useScrollPosition";
@@ -89,12 +89,49 @@ const Links = () => {
 }
 
 
+interface MobileProps{
+    open:unknown,
+    setOpen: Dispatch<SetStateAction<boolean>>
+}
+const Mobile = ({
+    open,
+    setOpen
+}:MobileProps) => {
+    const {navbarLinks} = useContext(NavbarContext)
+    
+    return ( 
+        <>
+            <i className="bi bi-list menuIcon" onClick={()=>{setOpen(!open)}}></i>
+            <div className="mobileNav" style={{
+                height: `${open ? '100vh' : '0'}`,
+                top: `${open ? '0' : '-20px'}`
+            }}>
+                <i className="bi bi-list menuIcon" onClick={()=>{setOpen(!open)}}></i>
+            {
+                <span className="linksMobile">
+                    {
+                        navbarLinks.map((item,index)=>{
+                            return(
+                                    <Link key={index} onClick={()=>{setOpen(!open)}} href={item.linkLocation}
+                                    >{item.linkName}</Link> 
+                                )
+                        })
+                    }
+                </span>
+            }
+            </div>
+        </>
+     );
+}
+
+
 const Navbar = () => {
 
     //make varables for scroll
     const { scrollY  } = useScroll()
     const [scrollPosition,setScrollPosition] = useState(false)
     const scrollThreshold = 100
+    const [open,setOpen] = useState(false)
 
     //this monitors the scroll position without constant rerenders
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -111,6 +148,7 @@ const Navbar = () => {
             <nav className={`navbar ${scrollPosition ? 'smallNavPadding' : ''}`}>
                 <Logo/>
                 <Links/>
+                <Mobile open={open} setOpen={setOpen}/>
             </nav>
         </>
      );

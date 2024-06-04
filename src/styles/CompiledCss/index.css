@@ -26,6 +26,12 @@ html body {
   min-height: 100vh;
   background-color: #f2fcfb;
 }
+@media (max-width: 452px) {
+  .mainContainer {
+    width: 100vw !important;
+    max-width: none;
+  }
+}
 
 .dividerContainer {
   width: 100%;
@@ -108,6 +114,56 @@ html body {
   max-height: 1000px;
   border: 0.5px solid #d3dbdb;
   transition: max-height 5s linear;
+}
+@media (max-width: 452px) {
+  .navbar .links {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    padding: 10px;
+  }
+}
+
+.menuIcon {
+  font-size: 3rem;
+  font-weight: 400;
+}
+@media (min-width: 452px) {
+  .menuIcon {
+    display: none;
+  }
+}
+
+.mobileNav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: end;
+}
+.mobileNav i {
+  width: max-content;
+}
+.mobileNav .linksMobile {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.mobileNav .linksMobile * {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
 }
 
 .sectionContainerPadded {
@@ -217,6 +273,12 @@ html body {
   font-weight: bold;
   text-decoration-color: #da4444;
 }
+@media (max-width: 452px) {
+  .pinkBox .LocationAndInfo {
+    margin-top: 2rem;
+    gap: 30px;
+  }
+}
 .pinkBox .Scocials {
   display: flex;
   gap: 15px;
@@ -284,6 +346,12 @@ html body {
   color: #da4444;
   font-size: 24px;
   font-weight: 700;
+}
+@media (max-width: 452px) {
+  .dontateContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .headdingANimals {

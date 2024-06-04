@@ -64,6 +64,10 @@
                     font-weight: bold;
                     text-decoration-color: $red;
                 }
+                @media (max-width:452px) {
+                    margin-top: 2rem;
+                    gap: 30px;
+                }
         }
         .Scocials{
             display: flex;
@@ -140,7 +144,14 @@
                             font-weight: 700;
                         }
                 }
-        }
+
+            }
+            @media (max-width: 452px) {
+                &{
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
 }
 
 .headdingANimals{
