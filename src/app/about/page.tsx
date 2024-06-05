@@ -29,9 +29,9 @@ const MissionStatement = () => {
     return ( 
         <>
             <span className="missionStatement">
-                <h2>Life with Pigs Mission Statement</h2>
+                <h2>Grandma{"'"}s House Mission Statement</h2>
                 <p>
-                Life with Pigs is dedicated to educating people about the injustices faced by animals and how we can better coexist with our fellow earthlings. We operate under the guiding principle that animals are our equals and deserve equal consideration for their needs and desires.
+                Grandma{"'"}s House is dedicated to educating people about the injustices faced by animals and how we can better coexist with our fellow earthlings. We operate under the guiding principle that animals are our equals and deserve equal consideration for their needs and desires.
                 </p>
             </span>
         </>

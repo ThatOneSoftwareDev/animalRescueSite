@@ -49,7 +49,7 @@ const Paragraph = () => {
     <>
       <span className="paragraph">
         <p><strong>
-        GRANDMA’S HOUSE RESCUE provides forever homes to farm animals in need and compassion-filled educational experiences to the public. 
+        GRANDMA’S HOUSE RESCUE provides forever homes to animals in need and compassion-filled educational experiences to the public. 
         </strong></p>
         
         <p><strong>
